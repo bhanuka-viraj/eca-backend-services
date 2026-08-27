@@ -1,0 +1,9 @@
+[submodule "user-service"]
+	path = user-service
+	url = https://github.com/bhanuka-viraj/user-service.git
+[submodule "course-service"]
+	path = course-service
+	url = https://github.com/bhanuka-viraj/course-service.git
+[submodule "media-service"]
+	path = media-service
+	url = https://github.com/bhanuka-viraj/media-service.git
