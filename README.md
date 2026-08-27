@@ -1,32 +1,41 @@
-# Backend Microservices Super-Repository
+# Enterprise Cloud Architecture - Domain Microservices Super-Repository
 
 ## Student Information
-- **Student Name:** [Your Full Name]
-- **Student Number:** [Your Student Number]
-- **Slack Handle:** [@your-slack-handle]
-- **GCP Project ID:** [your-gcp-project-id]
+- **Student Name:** J P Bhanuka Viraj Madhuranga
+- **Student Number:** 241711105
+- **GCP Project ID:** enterprise-cloud-module-503705
 
 ---
 
-## Project Description
-This super-repository contains all domain microservices for the enterprise system.
+## Project Overview
+This super-repository contains all domain microservices for the EduCloud enterprise course portal using Git submodules.
 
-### Microservices (Git Submodules):
-- [User & Auth Service](user-service) - Relational DB (Cloud SQL MySQL)
-- [Catalog Service](catalog-service) - Non-Relational DB (MongoDB)
-- [Media / Order Service](media-service) - Cloud Storage (GCS Bucket)
+### Microservices (Git Submodules)
+- [User Service](https://github.com/bhanuka-viraj/user-service) — User & instructor management backed by GCP Cloud SQL MySQL.
+- [Course Service](https://github.com/bhanuka-viraj/course-service) — Course catalog & curriculum management backed by MongoDB.
+- [Media Service](https://github.com/bhanuka-viraj/media-service) — File attachment and thumbnail storage integrated with Google Cloud Storage.
 
 ---
 
 ## Technology Stack
-- Java 25 & Spring Boot 3.x
-- Spring Data JPA (Hibernate) / Spring Data MongoDB
-- Google Cloud Platform (Compute Engine MIGs, Cloud SQL, Cloud Storage)
-- PM2
+- Java 25 & Spring Boot 4.1.1
+- Spring Cloud 2025.1.3 (Eureka Client, Actuator)
+- Spring Data JPA / Hibernate / MySQL Connector
+- Spring Data MongoDB
+- Google Cloud Storage Client SDK
+- PM2 Process Manager
+- Google Cloud Platform (Compute Engine Multi-Zone MIGs)
 
 ---
 
-## Setup & Running
-```bash
-git clone --recurse-submodules https://github.com/<username>/services-repo.git
-```\n
+## Local Development & Setup
+`ash
+# Clone super-repository with all submodules
+git clone --recurse-submodules https://github.com/bhanuka-viraj/eca-backend-services.git
+cd eca-backend-services
+
+# Build all microservices
+cd user-service && ./mvnw clean package && cd ..
+cd course-service && ./mvnw clean package && cd ..
+cd media-service && ./mvnw clean package && cd ..
+`
